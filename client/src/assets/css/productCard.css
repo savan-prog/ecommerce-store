@@ -1,0 +1,232 @@
+.product-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  /* color: inherit; */
+}
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+.product-image {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product-image img {
+  width: auto;
+  height: 180px;
+  max-width: 85%;
+  object-fit: contain;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.product-card:hover .product-image img {
+  transform: scale(1.05);
+}
+.product-info {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.product-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #212529;
+  margin-bottom: 10px;
+  line-height: 1.4;
+  height: 56px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+.product-category {
+  color: #6c757d;
+  font-size: 15px;
+  margin-bottom: 18px;
+  min-height: 22px;
+}
+.product-divider {
+  border: none;
+  border-top: 1px solid #d0d2d4;
+  margin: 15px 0;
+}
+.product-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.product-price {
+  font-size: 22px;
+  font-weight: 700;
+  color: #0d6efd;
+  letter-spacing: 0.3px;
+}
+.product-rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background: #198754;
+  color: white;
+  padding: 4px 10px;
+  border-radius: 14px;
+  font-size: 14px;
+  font-weight: 600;
+}
+/* Responsive CSS */
+/* Large Tablet / Small Desktop */
+@media (max-width: 1200px) {
+  .product-image {
+    height: 230px;
+  }
+  .product-image img {
+    height: 170px;
+  }
+  .product-info {
+    padding: 18px;
+  }
+  .product-title {
+    font-size: 19px;
+  }
+  .product-price {
+    font-size: 21px;
+  }
+}
+/* Tablet */
+@media (max-width: 992px) {
+  .product-image {
+    height: 220px;
+  }
+  .product-image img {
+    height: 165px;
+  }
+  .product-info {
+    padding: 17px;
+  }
+  .product-title {
+    font-size: 18px;
+    height: 51px;
+  }
+  .product-category {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+  .product-price {
+    font-size: 20px;
+  }
+  .product-rating {
+    padding: 4px 9px;
+    font-size: 13px;
+  }
+}
+/* Mobile */
+@media (max-width: 768px) {
+  .product-image {
+    height: 210px;
+  }
+  .product-image img {
+    height: 155px;
+    max-width: 80%;
+  }
+  .product-info {
+    padding: 16px;
+  }
+  .product-title {
+    font-size: 18px;
+    height: 50px;
+  }
+  .product-category {
+    font-size: 14px;
+    margin-bottom: 14px;
+  }
+  .product-divider {
+    margin: 12px 0;
+  }
+  .product-price {
+    font-size: 19px;
+  }
+  .product-rating {
+    padding: 4px 8px;
+    font-size: 13px;
+  }
+}
+/* Small Mobile */
+@media (max-width: 576px) {
+  .product-image {
+    height: 190px;
+  }
+  .product-image img {
+    height: 140px;
+  }
+  .product-info {
+    padding: 14px;
+  }
+  .product-title {
+    font-size: 17px;
+    height: 48px;
+    line-height: 1.4;
+  }
+  .product-category {
+    font-size: 13px;
+    margin-bottom: 12px;
+  }
+  .product-divider {
+    margin: 10px 0;
+  }
+  .product-bottom {
+    gap: 8px;
+  }
+  .product-price {
+    font-size: 18px;
+  }
+  .product-rating {
+    padding: 3px 7px;
+    font-size: 12px;
+  }
+}
+/* Extra Small Mobile */
+@media (max-width: 400px) {
+  .product-image {
+    height: 175px;
+  }
+  .product-image img {
+    height: 125px;
+    max-width: 78%;
+  }
+  .product-info {
+    padding: 12px;
+  }
+  .product-title {
+    font-size: 16px;
+    height: 45px;
+  }
+  .product-category {
+    font-size: 12px;
+    margin-bottom: 10px;
+  }
+  .product-divider {
+    margin: 9px 0;
+  }
+  .product-price {
+    font-size: 17px;
+  }
+  .product-rating {
+    padding: 3px 6px;
+    font-size: 11px;
+  }
+}

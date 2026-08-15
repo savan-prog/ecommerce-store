@@ -1,0 +1,265 @@
+.header {
+  background-color: #212529;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 0;
+}
+.logo a {
+  color: white;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: 700;
+}
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav-menu,
+.auth-menu {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.nav-menu a,
+.auth-menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+.nav-menu a:hover,
+.auth-menu a:hover {
+  color: #00c4ff;
+}
+.active-link {
+  color: #5e9af3 !important;
+  font-weight: 600;
+}
+.cart-icon {
+  position: relative;
+  color: white;
+  font-size: 17px;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.cart-icon:hover {
+  color: #00c4ff;
+}
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  width: 18px;
+  height: 18px;
+  color: white;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.user-name {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+}
+.logout-btn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.logout-btn:hover {
+  color: #00c4ff;
+}
+.menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 0;
+}
+.mobile-menu {
+  display: none;
+}
+
+
+/* Responsive CSS */
+@media (max-width: 1200px) {
+  .navbar {
+    padding: 18px 15px;
+  }
+  .nav-right {
+    gap: 25px;
+  }
+  .nav-menu,
+  .auth-menu {
+    gap: 22px;
+  }
+  .logo a {
+    font-size: 24px;
+  }
+}
+@media (max-width: 992px) {
+  .navbar {
+    padding: 16px 15px;
+  }
+  .logo a {
+    font-size: 23px;
+  }
+  .nav-right {
+    gap: 20px;
+  }
+  .nav-menu,
+  .auth-menu {
+    gap: 18px;
+  }
+  .nav-menu a,
+  .auth-menu a,
+  .user-name,
+  .logout-btn {
+    font-size: 15px;
+  }
+  .cart-icon {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .navbar {
+    position: relative;
+    padding: 18px 15px;
+  }
+  .nav-right {
+    display: none;
+  }
+  .menu-btn {
+    display: block;
+    font-size: 25px;
+  }
+  .mobile-menu {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 100vw;
+    background-color: #212529;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    overflow: hidden;
+    padding-left: 50px;
+    padding-right: 20px;
+    transform: translateX(-50%) translateY(-10px);
+    transition:
+      max-height 0.9s ease,
+      opacity 0.6s ease,
+      transform 0.9s ease,
+      visibility 0.9s ease;
+    z-index: 1000;
+  }
+  .mobile-menu-open {
+    max-height: 600px;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  .mobile-nav-link {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px 5px;
+  }
+  .mobile-nav-link:hover {
+    color: #00c4ff;
+  }
+  .mobile-user-name {
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px 5px;
+  }
+  .mobile-logout-btn {
+    width: fit-content;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px 5px;
+    cursor: pointer;
+  }
+  .mobile-logout-btn:hover {
+    color: #00c4ff;
+  }
+  .mobile-cart-link {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 14px 5px;
+  }
+  .mobile-cart-link:hover {
+    color: #00c4ff;
+  }
+}
+@media (max-width: 576px) {
+  .navbar {
+    padding: 16px 15px;
+  }
+  .logo a {
+    font-size: 22px;
+  }
+  .menu-btn {
+    font-size: 23px;
+  }
+  .mobile-menu {
+    padding-left: 40px;
+  }
+  .mobile-menu-open {
+    padding-top: 10px;
+    padding-bottom: 20px;
+  }
+}
+@media (max-width: 400px) {
+  .navbar {
+    padding: 16px 12px;
+  }
+  .logo a {
+    font-size: 20px;
+  }
+  .menu-btn {
+    font-size: 22px;
+  }
+  .mobile-menu {
+    padding-left: 22px;
+    padding-right: 15px;
+  }
+  .mobile-menu-open {
+    padding-top: 5px;
+    padding-bottom: 15px;
+  }
+  .mobile-nav-link,
+  .mobile-user-name,
+  .mobile-logout-btn,
+  .mobile-cart-link {
+    font-size: 15px;
+    padding: 12px 5px;
+  }
+}
