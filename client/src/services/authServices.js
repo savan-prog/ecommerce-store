@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API = "http://localhost:5000/api/users";
+const API = "https://ecommerce-store-xf6d.onrender.com/api/users";
 
 export const registerUser = async (userData) => {
   const res = await axios.post(`${API}/register`, userData);

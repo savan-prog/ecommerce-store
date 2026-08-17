@@ -12,7 +12,7 @@ const Dashboard = () => {
 
   const getDashboardStats = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/dashboard", {
+      const res = await axios.get("https://ecommerce-store-xf6d.onrender.com/api/dashboard", {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

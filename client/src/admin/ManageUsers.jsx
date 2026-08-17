@@ -10,7 +10,7 @@ const ManageUsers = () => {
   const getUsers = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:5000/api/users", {
+      const res = await axios.get("https://ecommerce-store-xf6d.onrender.com/api/users", {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -39,7 +39,7 @@ const ManageUsers = () => {
 
     try {
       const token = localStorage.getItem("token");
-      await axios.delete(`http://localhost:5000/api/users/${id}`, {
+      await axios.delete(`https://ecommerce-store-xf6d.onrender.com/api/users/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -27,7 +27,7 @@ const AddProduct = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/products",
+        "https://ecommerce-store-xf6d.onrender.com/api/products",
         {
           title,
           description,

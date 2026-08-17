@@ -12,7 +12,7 @@ const ManageProducts = () => {
 
   const getProducts = async () => {
     try {
-      const res = await axios.get("http://localhost:5000/api/products");
+      const res = await axios.get("https://ecommerce-store-xf6d.onrender.com/api/products");
       setProducts(res.data.products);
     } catch (error) {
       console.log(error.response?.data || error.message);
@@ -32,7 +32,7 @@ const ManageProducts = () => {
     try {
       const token = localStorage.getItem("token");
 
-      await axios.delete(`http://localhost:5000/api/products/${id}`, {
+      await axios.delete(`https://ecommerce-store-xf6d.onrender.com/api/products/${id}`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

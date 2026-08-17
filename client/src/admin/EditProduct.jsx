@@ -20,7 +20,7 @@ const EditProduct = () => {
 
   const getSingleProduct = async () => {
     try {
-      const res = await axios.get(`http://localhost:5000/api/products/${id}`);
+      const res = await axios.get(`https://ecommerce-store-xf6d.onrender.com/api/products/${id}`);
       //    console.log(res.data);
       const product = res.data.product;
       setTitle(product.title);
@@ -48,7 +48,7 @@ const EditProduct = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:5000/api/products/${id}`,
+        `https://ecommerce-store-xf6d.onrender.com/api/products/${id}`,
         {
           title,
           description,

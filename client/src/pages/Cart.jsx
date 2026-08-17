@@ -47,7 +47,7 @@ const Cart = () => {
         };
       });
       const res = await axios.post(
-        "http://localhost:5000/api/orders",
+        "https://ecommerce-store-xf6d.onrender.com/api/orders",
         {
           orderItems,
           totalPrice: subtotal,
